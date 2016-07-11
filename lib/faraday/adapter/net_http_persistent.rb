@@ -43,6 +43,7 @@ module Faraday
         http.private_key  = ssl[:client_key]   if ssl[:client_key]
         http.ca_file      = ssl[:ca_file]      if ssl[:ca_file]
         http.ssl_version  = ssl[:version]      if ssl[:version]
+        http.verify_callback = ssl[:verify_callback] if ssl[:verify_callback]
       end
     end
   end
